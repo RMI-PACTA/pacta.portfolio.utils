@@ -1,3 +1,3 @@
-# pacta.portfolio.utils 0.0.1.9000 (development version)
+# pacta.portfolio.utils 0.0.2
 
-* initial commit
+* Added a `NEWS.md` file to track changes to the package.
