@@ -8,6 +8,4 @@ set_web_parameters <- function(file_path) {
 
   .GlobalEnv$project_name <- cfg$parameters$project_name
   .GlobalEnv$new_data <- cfg$parameters$new_data
-
-  .GlobalEnv$financial_timestamp <- cfg$parameters$financial_timestamp
 }
