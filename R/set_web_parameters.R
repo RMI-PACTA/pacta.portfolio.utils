@@ -7,7 +7,6 @@ set_web_parameters <- function(file_path) {
   .GlobalEnv$user_results_path <- cfg$paths$user_data_location
 
   .GlobalEnv$project_name <- cfg$parameters$project_name
-  .GlobalEnv$new_data <- cfg$parameters$new_data
 
   .GlobalEnv$financial_timestamp <- cfg$parameters$financial_timestamp
 }
