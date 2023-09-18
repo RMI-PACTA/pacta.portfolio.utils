@@ -3,14 +3,12 @@
 #' A longer description of the function
 #'
 #' @param data_location_ext A description of the argument
-#' @param dataprep_ref A description of the argument
 #'
 #' @return A description of the return value
 #'
 #' @export
 
-set_analysis_inputs_path <- function(data_location_ext,
-                                     dataprep_ref = .GlobalEnv$datastore_timestamp) {
+set_analysis_inputs_path <- function(data_location_ext) {
   # project level setting takes precedence, portfolio level second, else what
   # set_webtool_paths() sets for data_location_ext
   if (!is.null(.GlobalEnv$proj_data_location_ext)) {
