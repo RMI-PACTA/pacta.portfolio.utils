@@ -4,15 +4,10 @@
 \alias{set_analysis_inputs_path}
 \title{A short description of the function}
 \usage{
-set_analysis_inputs_path(
-  data_location_ext,
-  dataprep_ref = .GlobalEnv$datastore_timestamp
-)
+set_analysis_inputs_path(data_location_ext)
 }
 \arguments{
 \item{data_location_ext}{A description of the argument}
-
-\item{dataprep_ref}{A description of the argument}
 }
 \value{
 A description of the return value
