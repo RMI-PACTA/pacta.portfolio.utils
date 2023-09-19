@@ -51,8 +51,6 @@ set_project_parameters <- function(file_path) {
   .GlobalEnv$asset_types <- cfg$asset_types
   .GlobalEnv$equity_market_list <- cfg$equity_market_list
 
-  .GlobalEnv$grouping_variables <- cfg$grouping_variables
-
   .GlobalEnv$green_techs <- cfg$sectors$green_techs
   .GlobalEnv$alignment_techs <- cfg$sectors$alignment_techs
 
