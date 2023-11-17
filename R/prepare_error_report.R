@@ -55,6 +55,9 @@ prepare_error_report <- function(
       params = list(errors = errors)
     )
   } else {
-    cat("rmarkdown not available, cannot render pdf")
+    file.copy (
+      from = file.path("inst", "rmd", "user_errors_generic.pdf"),
+      to = output_file
+    )
   }
 }
