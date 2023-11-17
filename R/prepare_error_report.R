@@ -26,7 +26,7 @@ prepare_error_report <- function(
         "<!doctype html>",
         "<html>",
         "<head>",
-        "<title>This is the title of the webpage!</title>",
+        "<title>User Error Report</title>",
         "</head>",
         "<body>",
         gsub(
