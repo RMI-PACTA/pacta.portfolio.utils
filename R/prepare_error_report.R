@@ -13,11 +13,33 @@ prepare_error_report <- function(
   }
 
   output_file <- file.path(html_directory, file_name)
-  rmarkdown::render(
-    input = report_template,
-    output_file = output_file,
-    params = list(errors = errors)
-  )
+
+  if (requireNamespace("rmarkdown", quietly = TRUE)) {
+    rmarkdown::render(
+      input = report_template,
+      output_file = output_file,
+      params = list(errors = errors)
+    )
+  } else {
+    writeLines(
+      text = paste(
+        "<!doctype html>",
+        "<html>",
+        "<head>",
+        "<title>This is the title of the webpage!</title>",
+        "</head>",
+        "<body>",
+        gsub(
+          pattern = "\n",
+          replacement = "<br>",
+          x = convert_user_errors_to_md(errors, header_level = 1)
+          ),
+        "</body>",
+        "</html>"
+      ),
+      con = output_file
+    )
+  }
 
   pdf_directory <- file.path(dirname(html_directory), "executive_summary")
   if (!dir.exists(pdf_directory)) {
@@ -25,10 +47,14 @@ prepare_error_report <- function(
   }
 
   output_file <- file.path(pdf_directory, "template.pdf")
-  rmarkdown::render(
-    input = report_template,
-    output_format = "pdf_document",
-    output_file = output_file,
-    params = list(errors = errors)
-  )
+  if (requireNamespace("rmarkdown", quietly = TRUE)) {
+    rmarkdown::render(
+      input = report_template,
+      output_format = "pdf_document",
+      output_file = output_file,
+      params = list(errors = errors)
+    )
+  } else {
+    cat("rmarkdown not available, cannot render pdf")
+  }
 }

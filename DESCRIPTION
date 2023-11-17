@@ -34,7 +34,6 @@ Imports:
     here,
     jsonlite,
     readr (>= 2.1.0),
-    rmarkdown,
     tibble
 Suggests: 
     callr,
@@ -43,6 +42,7 @@ Suggests:
     knitr,
     lintr,
     pkgdown,
+    rmarkdown,
     testthat (>= 3.0.0),
     withr,
     yaml
