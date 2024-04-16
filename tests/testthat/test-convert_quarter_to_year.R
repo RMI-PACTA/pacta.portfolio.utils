@@ -1,4 +1,5 @@
 test_that("properly converts a single unique quarter string to a year integer", {
+  expect_equal(convert_quarter_to_year("2019Q2"), 2019L)
   expect_equal(convert_quarter_to_year("2019Q4"), 2019L)
   expect_equal(convert_quarter_to_year("2020Q4"), 2020L)
   expect_equal(convert_quarter_to_year("2021Q4"), 2021L)
