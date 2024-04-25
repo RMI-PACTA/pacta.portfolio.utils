@@ -1,6 +1,4 @@
 test_that("`set_portfolio_parameters()` works as expected", {
-  skip_if_R_CMD_check()
-
   test_set_portfolio_parameters_in_callr <- function(.param) {
     callr::r(
       function(.params) {
