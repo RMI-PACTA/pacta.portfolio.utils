@@ -1,4 +1,4 @@
-test_that("sets appropriate global variables", {
+test_that("returns expected value when not overridden by a global variable", {
   data_location_ext <- "xxx"
 
   output <-
