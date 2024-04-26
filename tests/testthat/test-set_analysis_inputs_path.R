@@ -34,7 +34,7 @@ test_that("sets appropriate global variables", {
   expect_equal(output, proj_data_location_ext)
 })
 
-test_that("sets appropriate global variables", {
+test_that("returns expected value when overridden by a global variable", {
   data_location_ext <- "xxx"
   port_holdings_date <- "zzz"
 
