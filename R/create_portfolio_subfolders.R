@@ -23,7 +23,7 @@ create_portfolio_subfolders <- function(
   locs_to_create <- file.path(project_location, folders, portfolio_name_ref_all)
 
   for (path in locs_to_create) {
-    dir.create(path = path, showWarnings = FALSE)
+    dir.create(path = path, showWarnings = FALSE, recursive = TRUE)
   }
 
   invisible(portfolio_name_ref_all)
