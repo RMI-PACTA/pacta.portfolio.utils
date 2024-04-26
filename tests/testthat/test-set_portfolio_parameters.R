@@ -1,15 +1,14 @@
 test_that("`set_portfolio_parameters()` works as expected", {
   test_set_portfolio_parameters_in_callr <- function(.param) {
     callr::r(
-      function(.params) {
-        devtools::load_all(quiet = TRUE)
+      function(set_portfolio_parameters, .params) {
         filepath <- tempfile(fileext = ".yml")
         yaml::write_yaml(list(default = list(parameters = .params)), filepath)
         set_portfolio_parameters(filepath)
 
         as.list.environment(.GlobalEnv)
       },
-      args = list(parameters)
+      args = list(set_portfolio_parameters, parameters)
     )
   }
 
