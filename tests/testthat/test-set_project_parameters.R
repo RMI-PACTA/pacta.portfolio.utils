@@ -33,12 +33,11 @@ test_that("sets appropriate global variables", {
         asset_types = "test_asset_types",
         equity_market_list = "test_equity_market_list",
         methodology = list(
-          has_map = TRUE,
+          has_map = FALSE,
           has_credit = TRUE,
           has_revenue = TRUE,
           inc_emissionfactors = TRUE
         )
-
       )
     )
 
@@ -144,7 +143,7 @@ test_that("sets appropriate global variables", {
   )
   expect_equal(
     test_globalenv_vars$has_map,
-    TRUE
+    FALSE
   )
   expect_equal(
     test_globalenv_vars$has_credit,
@@ -157,5 +156,72 @@ test_that("sets appropriate global variables", {
   expect_equal(
     test_globalenv_vars$inc_emission_factors,
     TRUE
+  )
+})
+
+test_that("sets appropriate global variables when methodological vars are not in config", {
+  cfg <-
+    list(
+      default = list(
+        paths = list(
+          data_location_ext = "test_data_location_ext",
+          template_location = "test_template_location",
+          user_data_location = "test_user_data_location"
+        ),
+        reporting = list(
+          project_report_name = "test_project_report_name",
+          display_currency = "test_display_currency",
+          currency_exchange_value = 1.23
+        ),
+        parameters = list(
+          timestamp = "test_timestamp",
+          dataprep_timestamp = "test_dataprep_timestamp",
+          start_year = 2023,
+          horizon_year = 2029,
+          select_scenario = "test_select_scenario",
+          scenario_other = "test_scenario_other",
+          portfolio_allocation_method = "test_portfolio_allocation_method",
+          scenario_geography = "test_scenario_geography"
+        ),
+        sectors = list(
+          tech_roadmap_sectors = "test_tech_roadmap_sectors",
+          pacta_sectors_not_analysed = "test_pacta_sectors_not_analysed",
+          green_techs = "test_green_techs",
+          alignment_techs = "test_alignment_techs"
+        ),
+        scenario_sources_list = "test_scenario_sources_list",
+        scenario_geography_list = "test_scenario_geography_list",
+        asset_types = "test_asset_types",
+        equity_market_list = "test_equity_market_list"
+      )
+    )
+
+  config_path <- withr::local_file("config.yml")
+  yaml::write_yaml(x = cfg, file = config_path)
+
+  test_globalenv_vars <-
+    callr::r(
+      func = function(set_project_parameters, config_path) {
+        set_project_parameters(config_path)
+        as.list.environment(.GlobalEnv)
+      },
+      args = list(set_project_parameters, config_path)
+    )
+
+  expect_equal(
+    test_globalenv_vars$has_map,
+    TRUE
+  )
+  expect_equal(
+    test_globalenv_vars$has_credit,
+    FALSE
+  )
+  expect_equal(
+    test_globalenv_vars$has_revenue,
+    FALSE
+  )
+  expect_equal(
+    test_globalenv_vars$inc_emission_factors,
+    FALSE
   )
 })
