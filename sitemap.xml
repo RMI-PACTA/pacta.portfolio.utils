@@ -61,6 +61,9 @@
     <loc>https://rmi-pacta.github.io/pacta.portfolio.utils/reference/quit_if_no_pacta_relevant_data.html</loc>
   </url>
   <url>
+    <loc>https://rmi-pacta.github.io/pacta.portfolio.utils/reference/readRDS_or_return_alt_data.html</loc>
+  </url>
+  <url>
     <loc>https://rmi-pacta.github.io/pacta.portfolio.utils/reference/remove_if_exists.html</loc>
   </url>
   <url>
