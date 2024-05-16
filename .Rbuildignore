@@ -9,3 +9,4 @@
 ^\.lintr$
 ^README\.Rmd$
 ^_pkgdown\.yml$
+^codecov\.yml$
