@@ -51,6 +51,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Config/testthat/edition: 3
 Config/Needs/website: rmi-pacta/pacta.pkgdown.rmitemplate
-VignetteBuilder: knitr
 URL: https://github.com/RMI-PACTA/pacta.portfolio.utils
 BugReports: https://github.com/RMI-PACTA/pacta.portfolio.utils/issues
