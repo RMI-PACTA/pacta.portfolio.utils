@@ -12,6 +12,11 @@
 
 # write error log for input portfolio - msg should be a string containing the error message
 write_log <- function(msg, file_path = .GlobalEnv$log_path, ...) {
+  if (is.null(file_path)) {
+    warning("The object `file_path` does not exist. Skipping log writing.")
+    return(invisible(NULL))
+  }
+
   composed <- paste(
     as.character(Sys.time()),
     as.character(msg),
