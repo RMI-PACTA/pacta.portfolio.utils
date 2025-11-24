@@ -1,0 +1,71 @@
+# pacta.portfolio.utils
+
+The goal of pacta.portfolio.utils is to provide utility functions for
+the PACTA for Investors tools and ecosystem.
+
+## Installation
+
+You can install the development version of pacta.portfolio.utils from
+[R-universe](https://rmi-pacta.r-universe.dev/pacta.portfolio.utils)
+with:
+
+``` r
+install.packages("pacta.portfolio.utils", repos = "https://rmi-pacta.r-universe.dev")
+```
+
+or from [GitHub](https://github.com/RMI-PACTA/pacta.portfolio.utils)
+with:
+
+``` r
+# install.packages("pak")
+pak::pak("RMI-PACTA/pacta.portfolio.utils")
+```
+
+# Package index
+
+## All functions
+
+- [`abort_if_file_doesnt_exist()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/abort_if_file_doesnt_exist.md)
+  : Check if a file exists and abort with a message if not
+- [`create_portfolio_subfolders()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/create_portfolio_subfolders.md)
+  : A short description of the function
+- [`data_check()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/data_check.md)
+  : Checks whether a variable is a data frame
+- [`empty_audit_file()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/empty_audit_file.md)
+  : A short description of the function
+- [`empty_company_results()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/empty_company_results.md)
+  : A short description of the function
+- [`empty_emissions_results()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/empty_emissions_results.md)
+  : A short description of the function
+- [`empty_map_results()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/empty_map_results.md)
+  : A short description of the function
+- [`empty_portfolio_overview()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/empty_portfolio_overview.md)
+  : A short description of the function
+- [`empty_portfolio_results()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/empty_portfolio_results.md)
+  : A short description of the function
+- [`get_build_version_msg()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/get_build_version_msg.md)
+  : A short description of the function
+- [`log_user_errors()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/log_user_errors.md)
+  : Log user errors
+- [`quit_if_no_pacta_relevant_data()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/quit_if_no_pacta_relevant_data.md)
+  : A short description of the function
+- [`readRDS_or_return_alt_data()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/readRDS_or_return_alt_data.md)
+  : Return the object stored in a RDS at a specified file path, or an
+  alternate value/object if the file doesn't exist.
+- [`remove_if_exists()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/remove_if_exists.md)
+  : A short description of the function
+- [`save_if_exists()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/save_if_exists.md)
+  : A short description of the function
+- [`set_analysis_inputs_path()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/set_analysis_inputs_path.md)
+  : A short description of the function
+- [`set_portfolio_parameters()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/set_portfolio_parameters.md)
+  : A short description of the function
+- [`set_project_parameters()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/set_project_parameters.md)
+  : A short description of the function
+- [`set_webtool_paths()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/set_webtool_paths.md)
+  : A short description of the function
+- [`setup_project()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/setup_project.md)
+  : A short description of the function
+- [`write_log()`](https://rmi-pacta.github.io/pacta.portfolio.utils/reference/write_log.md)
+  : Write log
+
