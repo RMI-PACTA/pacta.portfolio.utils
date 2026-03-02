@@ -22,14 +22,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/RMI-PACTA/pacta.portfolio.utils/blob/main/DESCRIPTION)
 
-Yetman C, Hoffart J, Kastl J, Axthelm A (2025). *pacta.portfolio.utils:
+Yetman C, Hoffart J, Kastl J, Axthelm A (2026). *pacta.portfolio.utils:
 pacta.portfolio.utils*. R package version 0.0.2.9000,
 <https://github.com/RMI-PACTA/pacta.portfolio.utils>.
 
     @Manual{,
       title = {pacta.portfolio.utils: pacta.portfolio.utils},
       author = {CJ Yetman and Jackson Hoffart and Jacob Kastl and Alex Axthelm},
-      year = {2025},
+      year = {2026},
       note = {R package version 0.0.2.9000},
       url = {https://github.com/RMI-PACTA/pacta.portfolio.utils},
     }
